@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from './components/Login'
 import Demo from './components/Demo'
+import HelloWorld from '@/components/HelloWorld'
 
 // 0. 如果使用模块化机制编程，导入Vue和VueRouter，要调用 Vue.use(VueRouter)
 Vue.use(VueRouter)
@@ -20,6 +21,7 @@ const routes = [
     { path: '/bar', component: Bar },
     { path: '/', component: Login },
     { path: '/demo', component: Demo },
+    { path: '/helloworld', component: HelloWorld },
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置

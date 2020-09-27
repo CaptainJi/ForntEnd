@@ -72,7 +72,7 @@ export default {
             // 如果errcode==0 就把正确结果的token保存到localStorage
             localStorage.setItem("token", res.data.token);
             console.log(localStorage.getItem("token"));
-            this.$router.push("demo");
+            this.$router.push("helloworld");
           } else {
             window.alert("用户名或密码错误");
           }
