@@ -36,11 +36,13 @@
     <v-main>
       <HelloWorld />
     </v-main>
+    <div>{{ info }}</div>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from "@/components/HelloWorld";
+import http from "@/http";
 
 export default {
   name: "Demo",
@@ -52,5 +54,8 @@ export default {
   data: () => ({
     //
   }),
+  mounted() {
+    http.get("/testcase").then((response) => (this.info = response));
+  },
 };
 </script>
